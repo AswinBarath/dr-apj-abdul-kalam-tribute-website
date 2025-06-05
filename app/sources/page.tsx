@@ -60,5 +60,7 @@ const sources = [
     credibility: "Primary Source",
     icon: FileText,
     lastVerified: "2024-01-05"
-  },
-  {
+  }
+];
+
+export default sources;
