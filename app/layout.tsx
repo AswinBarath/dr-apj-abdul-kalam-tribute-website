@@ -79,6 +79,21 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  icons: {
+    icon: [
+      { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg', type: 'image/jpeg' },
+    ],
+    shortcut: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg',
+    apple: [
+      { url: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg', type: 'image/jpeg' },
+    ],
+    other: [
+      {
+        rel: 'apple-touch-icon-precomposed',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({

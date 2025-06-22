@@ -70,39 +70,39 @@ const quotes = [
 const speeches = [
   {
     id: 1,
-    title: "Dreams of India 2020",
-    description: "Vision for transforming India into a developed nation",
-    year: "2003",
-    duration: "45 min",
+    title: "Dr APJ Abdul Kalam | 2011",
+    description: "Dr APJ Abdul Kalam at IIT Gandhinagar | 2011",
+    year: "2011",
+    duration: "49 min",
     category: "Vision",
-    videoUrl: "https://www.youtube.com/embed/8jPQjjsBbIc"
+    videoUrl: "https://www.youtube.com/embed/weL2rinyV_U?si=a4s6DKU6RrzARprV"
   },
   {
     id: 2,
-    title: "Ignited Minds - Youth Power",
-    description: "Inspiring young minds to pursue excellence",
-    year: "2006",
-    duration: "38 min",
+    title: "Speech - ThinkEdu Conclave",
+    description: "Dr.APJ Abdul Kalam at ThinkEdu Conclave 2013, Chennai",
+    year: "2013",
+    duration: "56 min",
     category: "Youth",
-    videoUrl: "https://www.youtube.com/embed/3PdKwnv0Tuw"
+    videoUrl: "https://www.youtube.com/embed/34LROp3DYvc?si=rx6VdBh_sgv7oTxM"
   },
   {
     id: 3,
-    title: "Science and Spirituality",
-    description: "The harmony between scientific progress and spiritual growth",
-    year: "2009",
-    duration: "42 min",
+    title: "Creativity and Youth Power",
+    description: "Creativity and Youth Power | Dr. A.P.J. Abdul Kalam | IIT Madras",
+    year: "2011",
+    duration: "48 min",
     category: "Philosophy",
-    videoUrl: "https://www.youtube.com/embed/8jPQjjsBbIc"
+    videoUrl: "https://www.youtube.com/embed/HW6I4_VdPcA?si=4Y1wnHnVn7NcjWnK"
   },
   {
     id: 4,
-    title: "Innovation in Education",
-    description: "Transforming education through technology and creativity",
-    year: "2011",
-    duration: "35 min",
+    title: "Culture of Excellence Speech",
+    description: "ENGLISH SPEECH | DR. A.P.J ABDUL KALAM: Culture of Excellence (English Subtitles)",
+    year: "2014",
+    duration: "23 min",
     category: "Education",
-    videoUrl: "https://www.youtube.com/embed/3PdKwnv0Tuw"
+    videoUrl: "https://www.youtube.com/embed/LEtP7HgGTu0?si=bzueBMmHnGguNvlm"
   },
 ]
 

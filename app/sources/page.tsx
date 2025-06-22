@@ -225,41 +225,41 @@ export default function SourcesPage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Educational Resources</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <a 
-              href="https://www.youtube.com/watch?v=8jPQjjsBbIc" 
+              href="https://www.youtube.com/watch?v=34LROp3DYvc" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
             >
               <Youtube className="h-8 w-8 text-red-600" />
               <div>
-                <h3 className="font-semibold">Dream 2020 Speech</h3>
-                <p className="text-sm text-gray-600">Famous speech at IIT Delhi</p>
+                <h3 className="font-semibold">Kalam sir 2013 Speech</h3>
+                <p className="text-sm text-gray-600">Dr.APJ Abdul Kalam at ThinkEdu Conclave 2013, Chennai</p>
               </div>
             </a>
             
             <a 
-              href="https://www.youtube.com/watch?v=3PdKwnv0Tuw" 
+              href="https://www.youtube.com/watch?v=HW6I4_VdPcA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
             >
               <Youtube className="h-8 w-8 text-red-600" />
               <div>
-                <h3 className="font-semibold">Youth Power Speech</h3>
-                <p className="text-sm text-gray-600">Motivational talk for students</p>
+                <h3 className="font-semibold">Creativity and Youth Power</h3>
+                <p className="text-sm text-gray-600">Creativity and Youth Power | Dr. A.P.J. Abdul Kalam | IIT Madras</p>
               </div>
             </a>
             
             <a 
-              href="https://www.youtube.com/watch?v=8jPQjjsBbIc" 
+              href="https://www.youtube.com/watch?v=LEtP7HgGTu0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
             >
               <Youtube className="h-8 w-8 text-red-600" />
               <div>
-                <h3 className="font-semibold">Science & Spirituality</h3>
-                <p className="text-sm text-gray-600">Balancing scientific progress</p>
+                <h3 className="font-semibold">Culture of Excellence Speech</h3>
+                <p className="text-sm text-gray-600">ENGLISH SPEECH | DR. A.P.J ABDUL KALAM: Culture of Excellence (English Subtitles)</p>
               </div>
             </a>
           </div>
