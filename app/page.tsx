@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { BookOpen, Heart, Lightbulb, Rocket, Users, Quote } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import QuoteOfTheDay from "@/components/quote-of-the-day"
 
 export default function HomePage() {
   return (
@@ -37,8 +38,8 @@ export default function HomePage() {
             <div className="flex justify-center">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=320"
-                  alt="Dr. APJ Abdul Kalam"
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg"
+                  alt="Dr. APJ Abdul Kalam - The People's President"
                   width={320}
                   height={400}
                   className="rounded-lg shadow-2xl"
@@ -160,12 +161,8 @@ export default function HomePage() {
       {/* Featured Quote */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Quote className="h-12 w-12 text-blue-600 mx-auto mb-6" />
-            <blockquote className="text-2xl lg:text-3xl font-light text-gray-800 mb-6 italic">
-              "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."
-            </blockquote>
-            <cite className="text-lg text-gray-600">— Dr. APJ Abdul Kalam</cite>
+          <div className="max-w-4xl mx-auto">
+            <QuoteOfTheDay />
           </div>
         </div>
       </section>
@@ -203,6 +200,18 @@ export default function HomePage() {
                   <Quote className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">Quotes & Speeches</h3>
                   <p className="text-gray-600">Inspiring words and speeches</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/gallery" className="group">
+              <Card className="hover:shadow-lg transition-all group-hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="h-12 w-12 text-pink-600 mx-auto mb-4 flex items-center justify-center">
+                    <div className="h-8 w-8 border-2 border-pink-600 rounded-lg"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Photo Gallery</h3>
+                  <p className="text-gray-600">Visual journey through his life</p>
                 </CardContent>
               </Card>
             </Link>

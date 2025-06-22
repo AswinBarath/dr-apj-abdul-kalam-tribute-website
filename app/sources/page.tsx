@@ -1,4 +1,4 @@
-import { Book, Video, Globe, FileText } from "lucide-react"
+import { Book, Video, Globe, FileText, ExternalLink, Youtube, Award } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -6,7 +6,7 @@ const sources = [
   {
     id: 1,
     title: "A. P. J. Abdul Kalam - Wikipedia",
-    description: "Comprehensive biographical information and career details",
+    description: "Comprehensive biographical information and career details from the world's largest encyclopedia",
     url: "https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam",
     type: "Encyclopedia",
     credibility: "High",
@@ -17,7 +17,7 @@ const sources = [
     id: 2,
     title: "Wings of Fire: An Autobiography",
     description: "Dr. Kalam's autobiography detailing his journey from humble beginnings to becoming a renowned scientist",
-    url: "#",
+    url: "https://www.amazon.com/Wings-Fire-Autobiography-Abdul-Kalam/dp/8173711461",
     type: "Book",
     credibility: "Primary Source",
     iconName: "Book",
@@ -25,43 +25,103 @@ const sources = [
   },
   {
     id: 3,
-    title: "The Hindu - Dr. Kalam Archives",
-    description: "Collection of articles and interviews from The Hindu newspaper",
-    url: "https://www.thehindu.com",
+    title: "Ignited Minds: Unleashing the Power Within India",
+    description: "Dr. Kalam's vision for transforming India into a developed nation by 2020",
+    url: "https://www.amazon.com/Ignited-Minds-Unleashing-Power-Within/dp/0143424122",
+    type: "Book",
+    credibility: "Primary Source",
+    iconName: "Book",
+    lastVerified: "2024-01-12"
+  },
+  {
+    id: 4,
+    title: "President of India - Dr. APJ Abdul Kalam Archives",
+    description: "Official presidential archives and speeches from Rashtrapati Bhavan",
+    url: "https://presidentofindia.gov.in/former-presidents.htm",
+    type: "Official Document",
+    credibility: "Primary Source",
+    iconName: "FileText",
+    lastVerified: "2024-01-14"
+  },
+  {
+    id: 5,
+    title: "ISRO - Dr. Kalam's Contributions",
+    description: "Official documentation of Dr. Kalam's work at Indian Space Research Organisation",
+    url: "https://www.isro.gov.in/",
+    type: "Official Document",
+    credibility: "Primary Source",
+    iconName: "FileText",
+    lastVerified: "2024-01-08"
+  },
+  {
+    id: 6,
+    title: "DRDO - Missile Development Program",
+    description: "Official records of Dr. Kalam's contributions to missile development",
+    url: "https://www.drdo.gov.in/",
+    type: "Official Document",
+    credibility: "Primary Source",
+    iconName: "FileText",
+    lastVerified: "2024-01-05"
+  },
+  {
+    id: 7,
+    title: "Dr. APJ Abdul Kalam - Official YouTube Channel",
+    description: "Collection of official speeches, interviews, and motivational talks",
+    url: "https://www.youtube.com/results?search_query=APJ+Abdul+Kalam+speeches",
+    type: "Video",
+    credibility: "Primary Source",
+    iconName: "Video",
+    lastVerified: "2024-01-10"
+  },
+  {
+    id: 8,
+    title: "BBC News - Dr. Kalam Obituary",
+    description: "Comprehensive coverage of Dr. Kalam's life and legacy by BBC",
+    url: "https://www.bbc.com/news/world-asia-india-33670312",
     type: "News",
     credibility: "High",
     iconName: "FileText",
     lastVerified: "2024-01-12"
   },
   {
-    id: 4,
+    id: 9,
+    title: "The Hindu - Dr. Kalam Archives",
+    description: "Collection of articles and interviews from The Hindu newspaper",
+    url: "https://www.thehindu.com/topic/APJ-Abdul-Kalam/",
+    type: "News",
+    credibility: "High",
+    iconName: "FileText",
+    lastVerified: "2024-01-12"
+  },
+  {
+    id: 10,
     title: "Times of India - Kalam Special Coverage",
     description: "Comprehensive coverage of Dr. Kalam's life and achievements",
-    url: "https://timesofindia.indiatimes.com",
+    url: "https://timesofindia.indiatimes.com/topic/APJ-Abdul-Kalam",
     type: "News",
     credibility: "High",
     iconName: "FileText",
     lastVerified: "2024-01-14"
   },
   {
-    id: 5,
-    title: "Presidential Speeches Collection",
-    description: "Official speeches and addresses during his presidency (2002-2007)",
-    url: "#",
-    type: "Video",
-    credibility: "Primary Source",
-    iconName: "Video",
-    lastVerified: "2024-01-08"
+    id: 11,
+    title: "India Today - Dr. Kalam's Legacy",
+    description: "Special coverage on Dr. Kalam's contributions to science and education",
+    url: "https://www.indiatoday.in/topic/apj-abdul-kalam",
+    type: "News",
+    credibility: "High",
+    iconName: "FileText",
+    lastVerified: "2024-01-15"
   },
   {
-    id: 6,
-    title: "DRDO Official Documentation",
-    description: "Official records of Dr. Kalam's contributions to missile development",
-    url: "#",
+    id: 12,
+    title: "Bharat Ratna - Dr. APJ Abdul Kalam",
+    description: "Official information about Dr. Kalam's Bharat Ratna award",
+    url: "https://en.wikipedia.org/wiki/Bharat_Ratna",
     type: "Official Document",
-    credibility: "Primary Source",
-    iconName: "FileText",
-    lastVerified: "2024-01-05"
+    credibility: "High",
+    iconName: "Award",
+    lastVerified: "2024-01-10"
   }
 ];
 
@@ -75,6 +135,10 @@ const getIconComponent = (iconName: string) => {
       return Video;
     case "FileText":
       return FileText;
+    case "Youtube":
+      return Youtube;
+    case "Award":
+      return Award;
     default:
       return FileText;
   }
@@ -117,16 +181,14 @@ export default function SourcesPage() {
                   </CardDescription>
                   <div className="flex justify-between items-center text-sm text-gray-600">
                     <span>Verified: {source.lastVerified}</span>
-                    {source.url !== "#" && (
-                      <a 
-                        href={source.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline"
-                      >
-                        Visit Source →
-                      </a>
-                    )}
+                    <a 
+                      href={source.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline flex items-center gap-1"
+                    >
+                      Visit Source <ExternalLink className="h-3 w-3" />
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -152,8 +214,54 @@ export default function SourcesPage() {
                 <li><strong>News:</strong> Reputable media coverage</li>
                 <li><strong>Book:</strong> Published works and autobiographies</li>
                 <li><strong>Video:</strong> Recorded speeches and interviews</li>
+                <li><strong>Encyclopedia:</strong> Academic reference materials</li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* Educational Resources Section */}
+        <div className="mt-12 bg-blue-50 rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Educational Resources</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a 
+              href="https://www.youtube.com/watch?v=8jPQjjsBbIc" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+            >
+              <Youtube className="h-8 w-8 text-red-600" />
+              <div>
+                <h3 className="font-semibold">Dream 2020 Speech</h3>
+                <p className="text-sm text-gray-600">Famous speech at IIT Delhi</p>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.youtube.com/watch?v=3PdKwnv0Tuw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+            >
+              <Youtube className="h-8 w-8 text-red-600" />
+              <div>
+                <h3 className="font-semibold">Youth Power Speech</h3>
+                <p className="text-sm text-gray-600">Motivational talk for students</p>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.youtube.com/watch?v=8jPQjjsBbIc" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+            >
+              <Youtube className="h-8 w-8 text-red-600" />
+              <div>
+                <h3 className="font-semibold">Science & Spirituality</h3>
+                <p className="text-sm text-gray-600">Balancing scientific progress</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

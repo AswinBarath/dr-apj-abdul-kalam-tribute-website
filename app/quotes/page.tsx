@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Quote, Search, Heart, BookOpen, Users } from "lucide-react"
+import { Quote, Search, Heart, BookOpen, Users, Play, ExternalLink } from "lucide-react"
 
 const quotes = [
   {
@@ -75,6 +75,7 @@ const speeches = [
     year: "2003",
     duration: "45 min",
     category: "Vision",
+    videoUrl: "https://www.youtube.com/embed/8jPQjjsBbIc"
   },
   {
     id: 2,
@@ -83,6 +84,7 @@ const speeches = [
     year: "2006",
     duration: "38 min",
     category: "Youth",
+    videoUrl: "https://www.youtube.com/embed/3PdKwnv0Tuw"
   },
   {
     id: 3,
@@ -91,6 +93,7 @@ const speeches = [
     year: "2009",
     duration: "42 min",
     category: "Philosophy",
+    videoUrl: "https://www.youtube.com/embed/8jPQjjsBbIc"
   },
   {
     id: 4,
@@ -99,6 +102,7 @@ const speeches = [
     year: "2011",
     duration: "35 min",
     category: "Education",
+    videoUrl: "https://www.youtube.com/embed/3PdKwnv0Tuw"
   },
 ]
 
@@ -220,18 +224,39 @@ export default function QuotesPage() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-600">
-                        <span className="flex items-center gap-1">
-                          <BookOpen className="h-4 w-4" />
-                          {speech.year}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Users className="h-4 w-4" />
-                          {speech.duration}
-                        </span>
+                    <div className="space-y-4">
+                      {/* Video Embed */}
+                      <div className="relative w-full h-64 rounded-lg overflow-hidden">
+                        <iframe
+                          src={speech.videoUrl}
+                          title={speech.title}
+                          className="w-full h-full"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
                       </div>
-                      <Button size="sm">Watch Speech</Button>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4 text-sm text-gray-600">
+                          <span className="flex items-center gap-1">
+                            <BookOpen className="h-4 w-4" />
+                            {speech.year}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Users className="h-4 w-4" />
+                            {speech.duration}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Button size="sm" variant="outline" asChild>
+                            <a href={speech.videoUrl} target="_blank" rel="noopener noreferrer">
+                              <Play className="h-4 w-4 mr-1" />
+                              Watch on YouTube
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

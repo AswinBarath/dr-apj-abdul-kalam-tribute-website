@@ -27,6 +27,7 @@ export default function Header() {
     { name: "Biography", href: "/biography" },
     { name: "Timeline", href: "/timeline" },
     { name: "Quotes & Speeches", href: "/quotes" },
+    { name: "Gallery", href: "/gallery" },
     { name: "My Notes", href: "/notes" },
     { name: "Sources", href: "/sources" },
   ]
