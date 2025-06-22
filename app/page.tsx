@@ -27,7 +27,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-blue-800"
+                    className="border-white text-blue-100 hover:bg-white hover:text-blue-800 bg-transparent"
                   >
                     Read Quotes
                   </Button>
